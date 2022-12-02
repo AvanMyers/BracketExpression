@@ -6,3 +6,11 @@ D:\C# Project\BracketExpression\BracketExpression\obj\Debug\BracketExpression.cs
 D:\C# Project\BracketExpression\BracketExpression\obj\Debug\BracketExpression.csproj.CoreCompileInputs.cache
 D:\C# Project\BracketExpression\BracketExpression\obj\Debug\BracketExpression.exe
 D:\C# Project\BracketExpression\BracketExpression\obj\Debug\BracketExpression.pdb
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\obj\Debug\BracketExpression.csproj.AssemblyReference.cache
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\obj\Debug\BracketExpression.csproj.SuggestedBindingRedirects.cache
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\obj\Debug\BracketExpression.csproj.CoreCompileInputs.cache
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\obj\Debug\BracketExpression.exe
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\obj\Debug\BracketExpression.pdb
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\bin\Debug\BracketExpression.exe.config
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\bin\Debug\BracketExpression.exe
+D:\GItHub\BracketExpression\BracketExpression\BracketExpression\bin\Debug\BracketExpression.pdb

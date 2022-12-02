@@ -14,44 +14,57 @@ namespace BracketExpression
             int closedBrecketCount = 0;
             int brecketCountInLine = 0;
             int maxBrecketCount = 0;
-            string brecketLine = "((((()))()))()";
+            string brecketLine = "";
             char openBrecket = '(';
             char closedBrecket = ')';
             char recordedBrecket = '(';
 
+            Console.WriteLine("Введите скобочное выражение:");
+            brecketLine = Console.ReadLine();
             Console.WriteLine($"Строка состоит из {brecketLine}");
 
-            for(int i = 0; i < brecketLine.Length; i++)
+            for (int i = 0; i < brecketLine.Length; i++)
             {
-                if (brecketLine[i] == recordedBrecket)
+                if (brecketLine[0] == closedBrecket)
                 {
-                    brecketCountInLine++;
+                    Console.WriteLine("Ошибка");
+                    i = brecketLine.Length - 1;
                 }
                 else
                 {
-                    recordedBrecket = brecketLine[i];
-
-                    if (brecketCountInLine > maxBrecketCount)
+                    if (brecketLine[i] == recordedBrecket)
                     {
-                        maxBrecketCount = brecketCountInLine;
-                        brecketCountInLine= 0;
+                        brecketCountInLine++;
+                    }
+                    else if (brecketLine[i] == openBrecket || brecketLine[i] == closedBrecket)
+                    {
+                        recordedBrecket = brecketLine[i];
+
+                        if (brecketCountInLine > maxBrecketCount)
+                        {
+                            maxBrecketCount = brecketCountInLine;
+                            brecketCountInLine = 0;
+                        }
+                    }
+
+                    if (brecketLine[i] == openBrecket)
+                    {
+                        openBrecketCount++;
+                    }
+                    else if (brecketLine[i] == closedBrecket)
+                    {
+                        closedBrecketCount++;
                     }
                 }
 
-                if (brecketLine[i] == openBrecket)
-                {
-                    openBrecketCount++;
-                } 
-                else
-                {
-                    closedBrecketCount++;
-                }
+                Console.WriteLine($"{openBrecketCount}, {closedBrecketCount}");
             }
 
-            if(openBrecketCount == closedBrecketCount)
+            if (openBrecketCount == closedBrecketCount)
             {
                 Console.WriteLine($"Данное скобочное выражение является корректным и максимум глубины = {maxBrecketCount}");
-            } else
+            }
+            else
             {
                 Console.WriteLine("Данное выражение не является корректным.");
             }
