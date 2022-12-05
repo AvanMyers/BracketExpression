@@ -10,8 +10,7 @@ namespace BracketExpression
     {
         static void Main(string[] args)
         {
-            int openBrecketCount = 0;
-            int closedBrecketCount = 0;
+            int finalBecketCount = 0;
             int brecketCountInLine = 0;
             int maxBrecketCount = 0;
             string brecketLine = "";
@@ -49,18 +48,16 @@ namespace BracketExpression
 
                     if (brecketLine[i] == openBrecket)
                     {
-                        openBrecketCount++;
+                        finalBecketCount++;
                     }
                     else if (brecketLine[i] == closedBrecket)
                     {
-                        closedBrecketCount++;
+                        finalBecketCount--;
                     }
                 }
-
-                Console.WriteLine($"{openBrecketCount}, {closedBrecketCount}");
             }
 
-            if (openBrecketCount == closedBrecketCount)
+            if (finalBecketCount == 0)
             {
                 Console.WriteLine($"Данное скобочное выражение является корректным и максимум глубины = {maxBrecketCount}");
             }
