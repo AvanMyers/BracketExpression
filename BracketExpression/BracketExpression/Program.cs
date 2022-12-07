@@ -29,6 +29,11 @@ namespace BracketExpression
                     Console.WriteLine("Ошибка");
                     i = brecketLine.Length - 1;
                 }
+                else if (brecketLine[i] == closedBrecket && finalBecketCount == 0)
+                {
+                    Console.WriteLine("Ошибка");
+                    i = brecketLine.Length - 1;
+                }
                 else
                 {
                     if (brecketLine[i] == recordedBrecket)
